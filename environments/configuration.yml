@@ -11,7 +11,7 @@ docker_user: "{{ operator_user }}"
 operator_user: dragon
 
 # yamllint disable rule:line-length
-operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7YHS7Ecuncvw5yGnETqK5oqNYwkFG/TtUpkHIy/qeSwiYh256jU80awJG5MAz6hsGm7+xrEHGoUYsZoeo9Zo03QfrK8gO64WdS/AS6OEzlmS9ncHE1IqladQukVIySWbcLLrakzWs87FFq5AaSg0uARn4P8drRyxAMZIBpdlVQ4bvsqhFtPUrFHJzuNf5HdYdwWY2DVyFx36nFvfunYNWsz85Lr+bmVZedK7zeQTnUsKk0KZvCd4/cVrY++eWsC/0YQQXUyIN6sHTr4JWGI8u6CHxUwIJffKX6PEfbPzCywjHO9PgnYsm9y3Sd9bmjrVtVHRYX4OItlGRUqqkuLIWOqK6SKc03mC3vpMOz6vECBPIyZSQ6/HwUEs1CK6LURwR/D5mOvuEhmfwfKqIZfIgbZJAeGxn2X84S19C4gumJgFJEy4A0D4dKwAfL+kaG700SQjkxrgYCxZMmho+YxKc9nJOuCUOA24HzreyejFizDslj8r2VdX9NU5OdKWN/bIaKkQbuJjaIq/xPm46gjwXR8XXILE77v86OrJ2qSUzaXBcUzgD89JJFevXsex7CK5cPZWtQ3ul8UdsjmkklaiUO56wZWkzGNTFEN52NZwgj3fBx8D7nF9qhRFINOkIjaTChqADyTj4OklvZ1Vl+k//4cBJ+x6Fn0pUxMl31mPQOQ==
+operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDREIZU6MDKarGo5NbVQddwOlKYhWSZTVi8QVAtxYW6otsbVRTiH00PeV8XJJiQqiMYj5k9Q15aDJwP0r/f117zgX7VsM7tSRO4bGNtznxCoE3ioYyFF4oGb3AEfjHoc3CXNQ9ZBZLNryATgFTX4eeEaVqJYsIta3uDs16iffc/ElnKjIYi/kWd/uSUdGBkEaRtAVq8tMqGB/qC6lEbWjDoM9Laxf26tThLTmAQs1AbYwbFv6yCE8VjW1ys/r8cO90ipHScflSZGtNdelOsMjF+pJinbzzroB9bREBwXaFxR5aGYVa0/VnphVX1uBrOkrnfVzVM+PZq4lF+Dw3XuDXkuVxw23o4bTJMUncj4GLlQo4Y+2HvUGZBFKk6uFDBEDBy0l1PyW4TTn9UY3b00UCQuxxgseNBUGHShTW651M7hHkLvd3lvqgX2jf7K/u3eNeJ1+EUwSUN31CGmchKiBBZ4TpPLr4CGbv8aBzqkvHZ+GngEUeqYxrDvBFi5tbwZjYiDo3nr7hOiaolFbTn/otOz/0I9RSnIyiXrjt928Ij6U2ReHyegMsxizyiqfQ5HL386cGo7HsFuwASXw1Ee7NpUjQDykOLi23ROIG52ONdn8bKqKjSkWKM6YdsgyC00z8/kAFZYK9ITpJlX+60IebzkuRXjSEFes5S2JAqBM2gxQ==
 # yamllint enable rule:line-length
 
 operator_authorized_keys:
@@ -26,14 +26,14 @@ operator_authorized_keys:
 # DOCS: https://osism.tech/docs/guides/configuration-guide/commons/resolvconf
 resolvconf_nameserver:
   - 10.40.5.249
-resolvconf_search: osism.xyz
+resolvconf_search: osism.maas
 
 ##########################
 # hosts
 
 hosts_additional_entries:
-  api-int.osism.xyz: 10.40.6.150
-  api.osism.xyz: 10.40.6.250
+  api-int.osism.maas: 10.40.6.251
+  api.osism.maas: 10.40.6.250
 
 ##########################
 # chrony
@@ -48,4 +48,4 @@ chrony_servers:
 ##########################
 # ceph
 
-ceph_cluster_fsid: 1e8dd2f7-77ec-415e-ae2d-e5bb9274ecb6
+ceph_cluster_fsid: 0f162f8c-4bfa-45f8-9b59-4314f379e1a2
