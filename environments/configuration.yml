@@ -1,0 +1,51 @@
+---
+##########################
+# docker
+
+docker_version: '5:24.0.9'
+docker_user: "{{ operator_user }}"
+
+##########################
+# operator
+
+operator_user: dragon
+
+# yamllint disable rule:line-length
+operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7YHS7Ecuncvw5yGnETqK5oqNYwkFG/TtUpkHIy/qeSwiYh256jU80awJG5MAz6hsGm7+xrEHGoUYsZoeo9Zo03QfrK8gO64WdS/AS6OEzlmS9ncHE1IqladQukVIySWbcLLrakzWs87FFq5AaSg0uARn4P8drRyxAMZIBpdlVQ4bvsqhFtPUrFHJzuNf5HdYdwWY2DVyFx36nFvfunYNWsz85Lr+bmVZedK7zeQTnUsKk0KZvCd4/cVrY++eWsC/0YQQXUyIN6sHTr4JWGI8u6CHxUwIJffKX6PEfbPzCywjHO9PgnYsm9y3Sd9bmjrVtVHRYX4OItlGRUqqkuLIWOqK6SKc03mC3vpMOz6vECBPIyZSQ6/HwUEs1CK6LURwR/D5mOvuEhmfwfKqIZfIgbZJAeGxn2X84S19C4gumJgFJEy4A0D4dKwAfL+kaG700SQjkxrgYCxZMmho+YxKc9nJOuCUOA24HzreyejFizDslj8r2VdX9NU5OdKWN/bIaKkQbuJjaIq/xPm46gjwXR8XXILE77v86OrJ2qSUzaXBcUzgD89JJFevXsex7CK5cPZWtQ3ul8UdsjmkklaiUO56wZWkzGNTFEN52NZwgj3fBx8D7nF9qhRFINOkIjaTChqADyTj4OklvZ1Vl+k//4cBJ+x6Fn0pUxMl31mPQOQ==
+# yamllint enable rule:line-length
+
+operator_authorized_keys:
+  - "{{ operator_public_key }}"
+
+##########################
+# resolvconf
+
+# NOTE: As it is not trivial to comfortably query several entries for a parameter
+#       with Cookiecutter, only one DNS server is added here. At least one additional
+#       DNS server should be added.
+# DOCS: https://osism.tech/docs/guides/configuration-guide/commons/resolvconf
+resolvconf_nameserver:
+  - 10.40.5.249
+resolvconf_search: osism.xyz
+
+##########################
+# hosts
+
+hosts_additional_entries:
+  api-int.osism.xyz: 10.40.6.150
+  api.osism.xyz: 10.40.6.250
+
+##########################
+# chrony
+
+# NOTE: As it is not trivial to comfortably query several entries for a parameter
+#       with Cookiecutter, only one NTP server is added here. At least one additional
+#       NTP server should be added.
+# DOCS: https://osism.tech/docs/guides/configuration-guide/services/chrony
+chrony_servers:
+  - de.pool.ntp.org
+
+##########################
+# ceph
+
+ceph_cluster_fsid: 1e8dd2f7-77ec-415e-ae2d-e5bb9274ecb6

@@ -1,0 +1,49 @@
+---
+##########################
+# docker registries
+
+docker_registry: index.docker.io
+docker_registry_ansible: quay.io
+docker_registry_service: index.docker.io
+
+##########################
+# versions
+
+manager_version: 7.0.4
+
+
+##########################
+# ara
+
+ara_enable: true
+ara_server_host: "{{ hostvars[inventory_hostname]['ansible_' + internal_interface]['ipv4']['address'] }}"
+
+##########################
+# netbox
+
+netbox_enable: true
+netbox_api_url: "http://{{ hostvars[inventory_hostname]['ansible_' + internal_interface]['ipv4']['address'] }}:8121"
+
+##########################
+# celery
+
+celery_enable: true
+flower_host: "{{ hostvars[inventory_hostname]['ansible_' + internal_interface]['ipv4']['address'] }}"
+osism_api_host: "{{ hostvars[inventory_hostname]['ansible_' + internal_interface]['ipv4']['address'] }}"
+
+##########################
+# configuration
+
+configuration_directory: /opt/configuration
+configuration_git_private_key_file: ~/.ssh/id_rsa.configuration
+configuration_type: git
+
+configuration_git_host: github.com
+configuration_git_port: 22
+# yamllint disable rule:line-length
+configuration_git_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCY/6c4tx9d8C0IbLIVaoA1Q7q9TsZU66qcbDFVrtS4dHfAjqZuvnxzzABC0cPMwxDvMLtxs5ub9DMH0CAfgRnXbhYR+rWs25YArEwtotXUw2Nb5IaxXmUrROYaUEgqTvDqUmng4Lu/Yugs+0N9Z69q6A4s0bikqPauYFpR7KsYKFlK+zYxyuqg490tBYaQ8GkFcMaGYcZIIJWhoSVCOxQinAWQAw+0enKC7AMzE7Oek7mwLZh7UiQazh1m2JhadebHSTO9xuHIRcVxoaIhG+nwd3j2aoGuAokSqDz98PXsJqJJMeh7iVPs4ZEAJNmM8WZDR+XAkuFAFR1/acWr4bgc6CXxnSTpe3keRfycsRiLx/zfKHZAeeqjX5ebYkRU8thxooHJGGLQ2CXHQ0CN2A4vzZIwojR0ztPI+aP1BrfjwPMvWbR5uHX+ft4foLw5O4bG6pFTJYa2SALGlRXc4GfjAo4mGjObA/ZKSfBHq2BuOfoIkc6EQbCHsZoi0uEkoLYgpVkAwv3eEostM/natoEKIoAYf7rsjo+M4D5RZ+tSJ4iHiPbA6SUrQed65nUnyF0fRVUBk576gSiiV9pieBLCwyIaxUJsQWb2ePlxCAd8J1rrak52Jfu5uZhIbxHLdx1xNbU6opkeVBBlCKBGAPwfVpMkf2ULVWG1ugZA9sIY/Q==
+# yamllint enable rule:line-length
+configuration_git_protocol: ssh
+configuration_git_repository: jpvargasit911/cfg-cookiecutter
+configuration_git_username: jpvargasit911
+configuration_git_version: main
