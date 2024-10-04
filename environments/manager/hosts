@@ -4,4 +4,4 @@
 # DOCS: https://osism.tech/docs/guides/configuration-guide/configuration-repository#step-4-post-processing-of-the-generated-configuration
 
 [manager]
-node01
+osism-manager.maas

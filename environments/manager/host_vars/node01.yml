@@ -14,12 +14,12 @@
 #       initial provisioning to assign an IP address to the nodes, the address
 #       assigned via DHCP is initially used here and later adapted to the static
 #       IP address.
-ansible_host: 192.168.16.10
+ansible_host: 10.40.5.79
 
 ##########################################################
 # generic
 
-internal_interface: eno1
+internal_interface: enp5s0
 
 ##########################################################
 # network
@@ -27,8 +27,8 @@ internal_interface: eno1
 # NOTE: This is the initial management interface. Further interfaces can be added.
 # DOCS: https://osism.tech/docs/guides/configuration-guide/network
 network_ethernets:
-  eno1:
+  enp5s0:
     addresses:
-      - "192.168.16.10/20"
-    gateway4: "192.168.16.1"
+      - "10.40.5.79/24"
+    gateway4: "10.40.5.253"
     mtu: 1500
