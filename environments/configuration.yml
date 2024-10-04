@@ -2,7 +2,7 @@
 ##########################
 # docker
 
-docker_version: '5:24.0.9'
+docker_version: '5:26.1.4'
 docker_user: "{{ operator_user }}"
 
 ##########################
@@ -11,7 +11,7 @@ docker_user: "{{ operator_user }}"
 operator_user: dragon
 
 # yamllint disable rule:line-length
-operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCUZpLxjXaN7eJy1HhuWlmfxA2UZgSMp/LzTEOz6XrI2T1dMGbb581uZSByA+wxsa5LpKYV7JOrJOQVLakPDzNA5D9ygEIWHFjBwBqkoI7CHCTa/ol6TG0XHpZYKzb7l0IvLOVyEfdhV9/YdWv058bmaRRdZFfoeG+8mF2qrcXV8qsIeJhzhlvrWpKBDX4Hb3iPsRBPwtKejtkAfyPODCCfoaZd0izHuDFjxzHRMw4W6eopveLI+myPr6Bz4cx9whA2ZDr/Dko/X78EV724tabNWus2xnbAzSGqAuro8iELbc5vKo2xK4iEfRhkX873eNs3GEvoEZjxfzSUdlPJHwO6FK5P4j80q/IPCgyc2Yt9U1TtuzGRXnmrOFgenMLUlTxwOkqo7SAVk1jVlorxzl3kuklW+TIIwjgCnL1Fp6+HEjIssVBuH6tlMBD1yWkLIssA5RL3W0UzJfiMbfZGxYKCPG6HdlQhFPcdKUUVNMpitZa/9SQ8Kt8vcqp6IVNMvK4i5jPhoyx95TqRYo6US5/ACONdiKE2DfvFaN1JaT32+hKmqW+zJNYvxf534TrTeUvBiYHAM5wVJpYJWwj8vstAmcGx5IE3zqhqHlSyoQLJ0Vby/ZaWTG4OUaYZJP85qR/UQEhMvQIWq/YFDf2dWdgZ6fLWMijoObqzlhvL8N9YQQ==
+operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/DLpFwjys08pL1NjZPwBhi+sLYr7ciAlMfV8omuwGPiK1JfijWut0TEJOluPKKP9+25AEnNCoULwJGUU5Znfg+WbdYgmI1XYDH0eyG0raXFqbgGQV+sME//U4qRSNFubFZmgpeNoay/JzSOmAQIAAH6xdtDe3P6ribeNE3sKDKcGX9DAQ1JLpDKEvFrARjGWKwTHo/MoYQ+ELQzSfzThOMMVKn8EmCRhlDbVESSGIJHGSN5qpVXUTlMft7DNbFA1Ms5CmEKNIXbIgDa/MAevPayFePqRF/Yz4bLuyQ5WKi0LR2eSqbtkrIkhQ19mCxeaWwL7W92kFFzSvtyPM5r7IH4YPvnYQ7JVr1edV5kybRrIr+gJsTB8JiC3KWYp8ztJr4ywms97dOSRZ2n+im5Z17zwSDWiGVFuGCnRrwMd0k1CxAzFvnH2TXn5SLHTaJ3lQRBROY7VIqTKek6bSYIZ2Q2Rw4G4zcXX71k77uC/BF1GVUkMLi44s6QOEHtRKqwFG4ktdxD5z7QI8ikw5YT/8cWfIW9q+0Mo23ZHmyl7iuRzDFuM5bXJBc+UEXwMbolENBZS6Mhi7qbNCwmqUPKgF89MLtWEAzg9+H1nk1Dpcy2S9IimMr1u5Md5uj+qfZEC5Im0Mlt612knFuXr6qxmYwiWESkQL7P/tnakJ78fScw==
 # yamllint enable rule:line-length
 
 operator_authorized_keys:
@@ -25,15 +25,15 @@ operator_authorized_keys:
 #       DNS server should be added.
 # DOCS: https://osism.tech/docs/guides/configuration-guide/commons/resolvconf
 resolvconf_nameserver:
-  - 149.112.112.112
-resolvconf_search: osism.xyz
+  - 10.40.5.249
+resolvconf_search: maas
 
 ##########################
 # hosts
 
 hosts_additional_entries:
-  api-int.osism.xyz: 192.168.16.9
-  api.osism.xyz: 192.168.16.254
+  api-int.maas: 10.40.5.1
+  api.maas: 10.40.5.1
 
 ##########################
 # chrony
@@ -48,4 +48,4 @@ chrony_servers:
 ##########################
 # ceph
 
-ceph_cluster_fsid: fae6f8b9-d019-4bc2-b06d-28c346022c32
+ceph_cluster_fsid: 3dffe182-1816-4d27-803b-ae784c9278a6

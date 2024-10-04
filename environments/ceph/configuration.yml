@@ -2,13 +2,13 @@
 ##########################
 # generic
 
-fsid: fae6f8b9-d019-4bc2-b06d-28c346022c32
+fsid: 3dffe182-1816-4d27-803b-ae784c9278a6
 
 ##########################
 # network
 
-public_network: 192.168.16.0/20
-cluster_network: 192.168.16.0/20
+public_network: 10.40.6.0/24
+cluster_network: 10.40.6.0/24
 
 ##########################
 # custom
@@ -31,7 +31,7 @@ ceph_conf_overrides:
     "rgw keystone admin user": "ceph_rgw"
     "rgw keystone api version": "3"
     "rgw keystone implicit tenants": "true"
-    "rgw keystone url": "http://api-int.osism.xyz:5000"
+    "rgw keystone url": "http://api-int.maas:5000"
     "rgw keystone verify ssl": "false"
     "rgw s3 auth use keystone": "true"
     "rgw swift account in url": "true"

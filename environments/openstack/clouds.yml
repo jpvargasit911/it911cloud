@@ -4,7 +4,7 @@ clouds:
     auth:
       username: admin
       project_name: admin
-      auth_url: http://api-int.osism.xyz:5000/v3
+      auth_url: http://api-int.maas:5000/v3
       project_domain_name: default
       user_domain_name: default
     identity_api_version: 3
@@ -13,7 +13,7 @@ clouds:
     auth:
       username: octavia
       project_name: service
-      auth_url: http://api-int.osism.xyz:5000/v3
+      auth_url: http://api-int.maas:5000/v3
       project_domain_name: default
       user_domain_name: default
     identity_api_version: 3
