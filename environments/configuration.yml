@@ -26,6 +26,7 @@ operator_authorized_keys:
 # DOCS: https://osism.tech/docs/guides/configuration-guide/commons/resolvconf
 resolvconf_nameserver:
   - 10.40.5.249
+  - 8.8.8.8
 resolvconf_search: maas
 
 ##########################
