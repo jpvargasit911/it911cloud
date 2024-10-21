@@ -9,10 +9,8 @@ docker_registry_service: index.docker.io
 ##########################
 # versions
 
-manager_version: latest
+manager_version: 7.0.4
 
-ceph_version: quincy
-openstack_version: 2023.2
 
 ##########################
 # ara
@@ -43,7 +41,7 @@ configuration_type: git
 configuration_git_host: github.com
 configuration_git_port: 22
 # yamllint disable rule:line-length
-configuration_git_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDaUGLbR2knEMNAFET+65kRL2quY6QAaa1KbBJQu7oWo2Wd7Ne04E4THMBxInpPiS/37gfAenrW+2nMJJBNws/uj6/cWV+QZecUkvUfILn0R3qFEFJsAJ6oc9dgYRk05aI0C3JKUJaUBq+1ZBSFg1TsnVuLypC4GcsmAwYA2Uj4+9/b25OfCsMqgeiTsdg/bejedWMgObSBr3bjoTFNGE5oQof0EtriwbsacaP/ZzDs3qV/as8xjZnlXR3xqkpWvL69ozINpoBNHr3RoaPZJixNJo5NbruyuatVyza6Y15W3pl0D20ueJR2bcPdOh0GPs0QRVLE80851C6mcYmO2frTjpmYurBSPXI3xCQmBqwKmLzkfSL33e1c60kmh5CN+egMW89I/uh54fkFs+hJ+Z9F/w8BqK0VPwKQo2eEMjw7LNHbGVyC0sj6EtA1x36mjhR1laPe7fbVn2GaG7acju0zNG9UzMjfp/nR8hxFxr7IbOdLdPufo1IRVk8w6RIFOwILFPIm9bjN4NoHPncUS8q80FIyWclkSMulsXQez9G/QBHqQiSK72AXPDQwUD106KPw11DNnIlayV2z1yoTmE9sE7w/UPydZ0fNmSoojASBvBHJjf3Y+k2QcmjwzmQ7b4SpeIKt3dOpwW6H+gksUzq+q2inANLIhwNkl0E8cxMJiw==
+configuration_git_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC57TkV8zpZR5Zg9LrBFtI0BYhtAJCyjTZ1/V9WZwOpPBrGd6fmtrWOhc/RkopEBofCz8ySozAT2P+lWbcXyI4hEM4DQc6oNcjRMeWTGn+lo+VU4/kfq5HaadK6WN1+QkedrGFeNWzoY176qBa4Wpd4Lok8u6os9ISnzndcwIrHnHXdY4s+UMOBmgbD65DdY2HguLLshkKKKfc78c5NTmyTSOgksPL3Xw2HyycRHOimcORsQFrIWdPnPtr0wAchrFrLNDoh/eCRJs+Dh2EtGPPP8JsTS1Q3xfN2dwT7sDTCQRZaMp2zyZHjy1SscINpc+L+qpOL+dKDLXvJBQLujy0qmr7TP5oWIlssjFW2Cxzj4GCj2XY7IwiMxzOg6kmv+IMzICQxdQF/GrS3ifnaLlF54mjHLARCsL+3PSIIe7LMnjO+k3d/wh/lHJHMqPfrJCCh3e5zc71B2i9uT0VTIpHl9RTPRNseu1GS+sLYGMM+f/Ye3Ywoveeyb/8mCYnpbeoyfXJV7M0LJV+GlBwHCeptWZPjvgE56LbjAFZv7kI3Q6mMJOfIq2ZjrpkYW886x33A9HM8E6X3EroIA99aIVrVhA2A11AJGa2uptp+GmaZc0Yb55wCMZ2TJLu81kOZygYjXtsbewJMJIz6zPFKAbMDPOPybbJDPcHAV1qq/QB3ew==
 # yamllint enable rule:line-length
 configuration_git_protocol: ssh
 configuration_git_repository: jpvargasit911/it911cloud

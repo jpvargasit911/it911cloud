@@ -1,6 +1,6 @@
 # NOTE: This file must be edited before using the configuration repository.
-#       The  is used here as an example. Your own nodes must be added
-#       here. The  is then removed and not left in.
+#       The node01 is used here as an example. Your own nodes must be added
+#       here. The node01 is then removed and not left in.
 # DOCS: https://osism.tech/docs/guides/configuration-guide/configuration-repository#step-4-post-processing-of-the-generated-configuration
 
 ##########################################################
@@ -9,58 +9,43 @@
 # The "all" group is not used in OSISM. Therefore it is important
 # that all nodes are explicitly listed here.
 [generic]
-osism-manager.maas
-
+node01
 
 # Nodes that act as manager node (sometimes called deployment node)
 # are included in this group.
 [manager]
-osism-manager.maas
+node01
 
 # Nodes which are intended for monitoring services belong to
 # this group
 [monitoring]
-osism-manager.maas
+node01
 
 # Nodes that serve as controllers, so things like scheduler,
 # API or database run there, of the environment.
 [control]
-blade04-g9.maas
-blade05-g9.maas
-blade06-g9.maas
+node01
 
 # Virtual systems managed by OpenStack Nova are placed on
 # nodes in this group.
 [compute]
-blade04-g9.maas
-blade05-g9.maas
-blade06-g9.maas
-
+node01
 
 # Network resources managed by OpenStack Neutron, Octavia and Designate,
 # such as routers, are placed on these nodes. This group has nothing
 # to do with the general network configuration.
 [network]
-blade04-g9.maas
-blade05-g9.maas
-blade06-g9.maas
-
+node01
 
 # Nodes that serve as controllers for Ceph, so things like the
 # Ceph monitor service run here.
 [ceph-control]
-blade04-g9.maas
-blade05-g9.maas
-blade06-g9.maas
-
+node01
 
 # The storage available in these systems is provided in the
 # form of OSDs for Ceph.
 [ceph-resource]
-blade04-g9.maas
-blade05-g9.maas
-blade06-g9.maas
-
+node01
 
 [ceph-rgw:children]
 ceph-control

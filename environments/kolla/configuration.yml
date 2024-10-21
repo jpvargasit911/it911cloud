@@ -64,7 +64,12 @@ glance_backend_file: "no"
 ceph_nova_user: nova
 
 # NOTE: public_network from environments/ceph/configuration.yml
-ceph_public_network: 10.40.6.0/24
+ceph_public_network: 10.40.5.0/24
 
 #########################################################
 # other
+
+# When quorum queues are enabled by om_enable_rabbitmq_quorum_queues,
+# om_enable_rabbitmq_high_availability needs to be disabled
+om_enable_rabbitmq_high_availability: false
+om_enable_rabbitmq_quorum_queues: true

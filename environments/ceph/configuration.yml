@@ -2,13 +2,13 @@
 ##########################
 # generic
 
-fsid: 3dffe182-1816-4d27-803b-ae784c9278a6
+fsid: a5998f5b-eda5-4fd0-bd40-9c57aa098666
 
 ##########################
 # network
 
-public_network: 10.40.6.0/24
-cluster_network: 10.40.6.0/24
+public_network: 10.40.5.0/24
+cluster_network: 10.40.5.0/24
 
 ##########################
 # custom

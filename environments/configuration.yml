@@ -2,7 +2,7 @@
 ##########################
 # docker
 
-docker_version: '5:26.1.4'
+docker_version: '5:24.0.9'
 docker_user: "{{ operator_user }}"
 
 ##########################
@@ -11,7 +11,7 @@ docker_user: "{{ operator_user }}"
 operator_user: dragon
 
 # yamllint disable rule:line-length
-operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/DLpFwjys08pL1NjZPwBhi+sLYr7ciAlMfV8omuwGPiK1JfijWut0TEJOluPKKP9+25AEnNCoULwJGUU5Znfg+WbdYgmI1XYDH0eyG0raXFqbgGQV+sME//U4qRSNFubFZmgpeNoay/JzSOmAQIAAH6xdtDe3P6ribeNE3sKDKcGX9DAQ1JLpDKEvFrARjGWKwTHo/MoYQ+ELQzSfzThOMMVKn8EmCRhlDbVESSGIJHGSN5qpVXUTlMft7DNbFA1Ms5CmEKNIXbIgDa/MAevPayFePqRF/Yz4bLuyQ5WKi0LR2eSqbtkrIkhQ19mCxeaWwL7W92kFFzSvtyPM5r7IH4YPvnYQ7JVr1edV5kybRrIr+gJsTB8JiC3KWYp8ztJr4ywms97dOSRZ2n+im5Z17zwSDWiGVFuGCnRrwMd0k1CxAzFvnH2TXn5SLHTaJ3lQRBROY7VIqTKek6bSYIZ2Q2Rw4G4zcXX71k77uC/BF1GVUkMLi44s6QOEHtRKqwFG4ktdxD5z7QI8ikw5YT/8cWfIW9q+0Mo23ZHmyl7iuRzDFuM5bXJBc+UEXwMbolENBZS6Mhi7qbNCwmqUPKgF89MLtWEAzg9+H1nk1Dpcy2S9IimMr1u5Md5uj+qfZEC5Im0Mlt612knFuXr6qxmYwiWESkQL7P/tnakJ78fScw==
+operator_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCGbwMDQzunE54dF+6xOb3OREe76pPdPo0weEFRHUdh2ocOMB2T35IfOuuxFS3wBZ3hjyhI5p57rBQQ3wnunFtOMaWV12xEJMFzm+nwmmS/glZKLJFbR6sELwWvk8ISXepUIIv9MyF+Le69/fPr8KpvRP/hv+UQRsISWVe+Ku4kV+DZRjtxt3zln71YnIZDKg9OCnNVkU+sl4c1KMI/RdisnR/XcXId2VOKJj+bn/U86QX5IeMHYcK6lwZWYjsfA2m/65jiIL+c2FxVR3UcBwCHOmOYn0LP358ShQZ9IvHyAhT5eLIAiyakoy2NIXFgPpeRttjlPsQR4NxRv/EkKXQZPcxlVBu+ccjPiA34PSoM9WkkDFhyeYN+lbj245URjqWMO0085fBzhspzo11ALWRt2sHs3RiUzda+TEW8BCVledquPub4GwArPqHBa25Udiu7DRzQ9qnwbAW3l4bJ9tzU5mam1jG1M3BJlPwU6/nPy5dfYSLX174bxfRuE+SV8hjXdTP56n/5z5KPru+OJn3fqQdZKPelUApv/ZIY44xDTjw4PQOGl0rIQ6PLFXcv2grBNaZHRuLjzSJm7QWjgQCr31TaE210eztVboy9+fnwRyly2dEGBdStbfm48DUkFPCyUjKAKHNNNtQYjrX6YaNmaNd0/TyYnxvcEBHonUp3MQ==
 # yamllint enable rule:line-length
 
 operator_authorized_keys:
@@ -26,7 +26,6 @@ operator_authorized_keys:
 # DOCS: https://osism.tech/docs/guides/configuration-guide/commons/resolvconf
 resolvconf_nameserver:
   - 10.40.5.249
-  - 8.8.8.8
 resolvconf_search: maas
 
 ##########################
@@ -49,4 +48,4 @@ chrony_servers:
 ##########################
 # ceph
 
-ceph_cluster_fsid: 3dffe182-1816-4d27-803b-ae784c9278a6
+ceph_cluster_fsid: a5998f5b-eda5-4fd0-bd40-9c57aa098666
